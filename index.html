@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff8f5">
+  <meta name="description" content="Little Garden Bot privacy policy in English and Thai.">
+  <title>Privacy Policy · Little Garden Bot</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #fffaf7;
+      --paper-deep: #fff1ec;
+      --rose: #d98fa0;
+      --rose-dark: #9d5368;
+      --rose-soft: #f7dce2;
+      --ink: #513d45;
+      --muted: #816d74;
+      --line: #eedde0;
+      --leaf: #7e9277;
+      --leaf-light: #e8eee3;
+      --white-glass: rgba(255,255,255,.72);
+      --shadow: 0 18px 48px rgba(125, 75, 91, .10);
+      --radius: 24px;
+      --max: 1080px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(ellipse at 6% 6%, rgba(247,220,226,.7), transparent 30rem),
+        radial-gradient(ellipse at 95% 24%, rgba(232,238,227,.72), transparent 26rem),
+        var(--paper);
+      color: var(--ink);
+      font-family: ui-rounded, "Avenir Next", Avenir, "Segoe UI", system-ui, -apple-system, sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--rose-dark); text-underline-offset: 3px; }
+    a:hover { color: #75384c; }
+    a:focus-visible, button:focus-visible, summary:focus-visible {
+      outline: 3px solid #bb6e83;
+      outline-offset: 4px;
+      border-radius: 8px;
+    }
+    .skip-link {
+      position: absolute; left: 12px; top: -60px; z-index: 99;
+      background: var(--ink); color: white; padding: 10px 14px; border-radius: 12px;
+    }
+    .skip-link:focus { top: 12px; }
+    .shell { width: min(var(--max), calc(100% - 36px)); margin-inline: auto; }
+    .site-header {
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(255,250,247,.84);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(238,221,224,.8);
+    }
+    .nav-wrap { display: flex; align-items: center; justify-content: space-between; gap: 18px; min-height: 76px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; color: var(--ink); text-decoration: none; font-weight: 800; letter-spacing: -.035em; }
+    .brand-mark {
+      display: grid; place-items: center; width: 43px; height: 43px; border-radius: 15px;
+      background: linear-gradient(145deg, #f8dce3, #fff1ec); border: 1px solid #f0cbd5;
+      color: var(--rose-dark); box-shadow: 0 5px 15px rgba(157,83,104,.10);
+    }
+    .brand-name { display: block; line-height: 1.2; font-size: 1rem; }
+    .brand-sub { display: block; color: var(--muted); font-size: .69rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; margin-top: 3px; }
+    .nav-links { display: flex; align-items: center; gap: 22px; }
+    .nav-links a { text-decoration: none; font-size: .9rem; font-weight: 650; color: var(--muted); }
+    .nav-links a:hover { color: var(--rose-dark); }
+    .nav-cta, .button {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      border: 0; border-radius: 999px; background: var(--rose-dark); color: white !important;
+      padding: 11px 17px; text-decoration: none; font-weight: 750; font-size: .9rem;
+      box-shadow: 0 7px 18px rgba(157,83,104,.18); transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .nav-cta:hover, .button:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(157,83,104,.22); }
+    .menu-toggle { display: none; border: 1px solid var(--line); background: white; color: var(--ink); border-radius: 12px; padding: 9px 12px; font: inherit; }
+    .hero { padding: 64px 0 38px; }
+    .hero-card {
+      position: relative; overflow: hidden; isolation: isolate;
+      padding: clamp(28px, 6vw, 66px); border: 1px solid rgba(238,221,224,.95);
+      border-radius: 34px; background: linear-gradient(135deg, rgba(255,255,255,.88), rgba(255,241,236,.78));
+      box-shadow: var(--shadow);
+    }
+    .hero-card::before, .hero-card::after { content: ""; position: absolute; z-index: -1; border-radius: 50%; pointer-events: none; }
+    .hero-card::before { width: 280px; height: 280px; right: -80px; top: -100px; background: radial-gradient(circle, rgba(247,220,226,.92), rgba(247,220,226,0)); }
+    .hero-card::after { width: 220px; height: 220px; right: 16%; bottom: -150px; background: radial-gradient(circle, rgba(232,238,227,.9), rgba(232,238,227,0)); }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; color: var(--rose-dark); text-transform: uppercase; letter-spacing: .16em; font-size: .72rem; font-weight: 850; }
+    .eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--leaf); box-shadow: 0 0 0 4px var(--leaf-light); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { max-width: 700px; margin: 17px 0 17px; font-size: clamp(2.45rem, 7vw, 5.15rem); letter-spacing: -.065em; line-height: 1.03; font-weight: 850; }
+    h1 .accent { color: var(--rose-dark); font-family: Georgia, "Times New Roman", serif; font-weight: 500; font-style: italic; letter-spacing: -.055em; }
+    .hero-copy { max-width: 650px; color: var(--muted); font-size: clamp(1rem, 2vw, 1.15rem); }
+    .hero-bottom { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-top: 28px; }
+    .updated { color: var(--muted); font-size: .84rem; display: flex; align-items: center; gap: 8px; }
+    .garden-art { position: absolute; right: clamp(20px, 5vw, 60px); bottom: 30px; width: 160px; height: 165px; opacity: .9; }
+    .garden-art svg { width: 100%; height: 100%; overflow: visible; }
+    .intro-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 18px; margin: 22px 0 54px; }
+    .soft-card { border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; background: var(--white-glass); box-shadow: 0 8px 24px rgba(125,75,91,.045); }
+    .soft-card h2 { font-size: 1.1rem; margin-bottom: 8px; letter-spacing: -.02em; }
+    .soft-card p { color: var(--muted); margin-bottom: 0; font-size: .94rem; }
+    .icon-bubble { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 14px; background: var(--rose-soft); color: var(--rose-dark); margin-bottom: 14px; }
+    .leaf-bubble { background: var(--leaf-light); color: #5e7658; }
+    .policy-layout { display: grid; grid-template-columns: 245px minmax(0, 1fr); align-items: start; gap: 28px; padding-bottom: 70px; }
+    .toc { position: sticky; top: 100px; padding: 21px; border: 1px solid var(--line); border-radius: 22px; background: rgba(255,255,255,.66); }
+    .toc h2 { font-size: .75rem; text-transform: uppercase; letter-spacing: .15em; color: var(--muted); margin-bottom: 13px; }
+    .toc a { display: block; padding: 8px 10px; border-radius: 10px; text-decoration: none; color: var(--muted); font-size: .88rem; font-weight: 650; }
+    .toc a:hover { background: var(--paper-deep); color: var(--rose-dark); }
+    .policy-heading { margin-bottom: 19px; }
+    .policy-heading h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); letter-spacing: -.055em; margin-bottom: 7px; }
+    .policy-heading p { color: var(--muted); margin-bottom: 0; }
+    .policy-list { display: grid; gap: 12px; }
+    details.policy-item { border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.78); overflow: clip; transition: border-color .2s ease, box-shadow .2s ease; }
+    details.policy-item[open] { border-color: #e3b6c2; box-shadow: 0 10px 28px rgba(125,75,91,.06); }
+    details.policy-item summary { display: flex; align-items: center; gap: 13px; list-style: none; cursor: pointer; padding: 18px 20px; font-weight: 780; letter-spacing: -.015em; }
+    details.policy-item summary::-webkit-details-marker { display: none; }
+    .section-number { display: grid; place-items: center; flex: 0 0 34px; width: 34px; height: 34px; border-radius: 12px; background: var(--paper-deep); color: var(--rose-dark); font-size: .78rem; font-weight: 850; }
+    .chevron { margin-left: auto; color: var(--rose-dark); font-size: 1.15rem; transition: transform .2s ease; }
+    details[open] .chevron { transform: rotate(180deg); }
+    .policy-content { padding: 0 23px 22px 67px; color: #6e5961; font-size: .94rem; }
+    .policy-content p:last-child, .policy-content ul:last-child { margin-bottom: 0; }
+    .policy-content ul { padding-left: 20px; }
+    .policy-content li { margin: 6px 0; }
+    .callout { padding: 15px 17px; margin: 15px 0; border-left: 3px solid var(--leaf); border-radius: 0 12px 12px 0; background: #f2f5ef; color: #53654e; }
+    .contact-card { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; padding: clamp(24px, 5vw, 38px); border-radius: 26px; background: linear-gradient(135deg, #f8e2e7, #fff2ed 65%, #edf2e8); border: 1px solid #efd5dc; margin-top: 25px; }
+    .contact-card h2 { font-size: 1.55rem; letter-spacing: -.04em; margin-bottom: 7px; }
+    .contact-card p { color: var(--muted); margin-bottom: 0; max-width: 520px; }
+    footer { border-top: 1px solid var(--line); padding: 25px 0 35px; color: var(--muted); font-size: .84rem; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 14px; flex-wrap: wrap; }
+    .footer-brand { color: var(--ink); font-weight: 800; }
+    .top-button {
+      position: fixed; right: 18px; bottom: 18px; z-index: 15; width: 46px; height: 46px; border: 1px solid #e8c6ce;
+      border-radius: 16px; background: rgba(255,255,255,.88); color: var(--rose-dark); box-shadow: var(--shadow);
+      font-size: 1.25rem; cursor: pointer; opacity: 0; transform: translateY(10px); pointer-events: none; transition: .2s ease;
+    }
+    .top-button.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    .tiny-flower { display: inline-block; color: var(--rose); margin: 0 4px; }
+    @media (max-width: 800px) {
+      .intro-grid { grid-template-columns: 1fr 1fr; }
+      .policy-layout { grid-template-columns: 1fr; gap: 23px; }
+      .toc { position: static; }
+      .toc nav { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 2px 8px; }
+      .garden-art { width: 125px; height: 135px; right: 20px; bottom: 20px; opacity: .65; }
+      .hero-copy { max-width: 560px; }
+    }
+    @media (max-width: 600px) {
+      .shell { width: min(100% - 24px, var(--max)); }
+      .nav-wrap { min-height: 68px; }
+      .menu-toggle { display: inline-flex; align-items: center; gap: 6px; }
+      .nav-links { display: none; position: absolute; left: 12px; right: 12px; top: 62px; padding: 15px; background: rgba(255,250,247,.98); border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); flex-direction: column; align-items: stretch; gap: 4px; }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 10px 11px; }
+      .nav-links .nav-cta { text-align: center; margin-top: 5px; }
+      .hero { padding-top: 26px; }
+      .hero-card { padding: 29px 22px 34px; border-radius: 26px; }
+      h1 { font-size: clamp(2.55rem, 13vw, 4rem); max-width: 440px; }
+      .hero-copy { max-width: 100%; padding-right: 0; }
+      .garden-art { position: relative; display: block; width: 110px; height: 110px; right: auto; bottom: auto; margin: 8px 0 -8px auto; opacity: .9; }
+      .hero-bottom { align-items: flex-start; margin-top: 20px; }
+      .intro-grid { grid-template-columns: 1fr; margin-bottom: 42px; }
+      .soft-card { padding: 21px; }
+      .toc nav { grid-template-columns: 1fr 1fr; }
+      .policy-heading h2 { font-size: 2rem; }
+      details.policy-item summary { padding: 15px; gap: 10px; }
+      .policy-content { padding: 0 17px 19px 59px; font-size: .92rem; }
+      .contact-card { align-items: flex-start; }
+      .contact-card .button { width: 100%; }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+    .language-switch { display:flex; gap:4px; align-items:center; margin-left:auto; margin-right:12px; padding:4px; border:1px solid var(--line); border-radius:999px; background:rgba(255,255,255,.7); }
+    .lang-btn { border:0; border-radius:999px; padding:7px 10px; font:inherit; font-size:.78rem; font-weight:800; color:var(--muted); background:transparent; cursor:pointer; }
+    .lang-btn.active { background:var(--rose-soft); color:var(--rose-dark); }
+    .lang-btn:focus-visible { outline:2px solid var(--rose-dark); outline-offset:2px; }
+    @media (max-width: 680px) { .language-switch { margin-left:auto; margin-right:8px; } .menu-toggle { padding:9px 10px; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell nav-wrap">
+      <a class="brand" href="#top" aria-label="Little Garden Bot home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="27" height="27" fill="none">
+            <path d="M16 26V14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M16 19C7 20 5 14 6 8c7 0 12 3 10 11Z" fill="#7e9277" stroke="#61785a" stroke-width="1.2"/>
+            <path d="M16 15C15 7 21 4 27 5c1 7-3 12-11 10Z" fill="#e7a9b7" stroke="#bd7488" stroke-width="1.2"/>
+            <circle cx="16" cy="27" r="2" fill="#d98fa0"/>
+          </svg>
+        </span>
+        <span><span class="brand-name">Little Garden Bot</span><span class="brand-sub">A gentle corner of Discord</span></span>
+      </a>
+      <div class="language-switch" role="group" aria-label="Choose language"><button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button><button type="button" class="lang-btn" data-lang="th" aria-pressed="false">TH</button></div>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks"><span aria-hidden="true">☰</span> Menu</button>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#policy">Privacy policy</a>
+        <a href="#data">Data we may process</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-cta" href="https://discord.gg/dbExmqRypP" target="_blank" rel="noopener noreferrer">Visit our garden ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero shell" id="top" aria-labelledby="hero-title">
+      <div class="hero-card">
+        <span class="eyebrow"><span class="dot" aria-hidden="true"></span> Privacy & transparency</span>
+        <h1 id="hero-title">Your privacy,<br><span class="accent">gently tended.</span></h1>
+        <p class="hero-copy">A clear, friendly guide to the information Little Garden Bot may process while bringing small games, garden moments, pets, and community tools to your Discord server.</p>
+        <div class="hero-bottom">
+          <div class="updated"><span aria-hidden="true">✿</span> Last updated: October 21, 2026</div>
+          <a class="button" href="#policy">Read the policy <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="garden-art" aria-hidden="true">
+          <svg viewBox="0 0 180 180" fill="none">
+            <path d="M90 162C88 124 92 94 91 64" stroke="#718b68" stroke-width="3.4" stroke-linecap="round"/>
+            <path d="M90 127C64 129 48 112 50 91C72 91 91 103 90 127Z" fill="#b9cbb0" stroke="#718b68" stroke-width="1.8"/>
+            <path d="M91 104C95 80 116 70 137 76C137 98 118 112 91 104Z" fill="#d6e0ce" stroke="#718b68" stroke-width="1.8"/>
+            <path d="M90 76C70 70 67 50 80 35C97 45 103 61 90 76Z" fill="#e7a9b7" stroke="#bd7488" stroke-width="1.8"/>
+            <path d="M91 77C100 55 120 53 135 65C126 82 108 88 91 77Z" fill="#f1c5ce" stroke="#bd7488" stroke-width="1.8"/>
+            <path d="M90 77C68 66 48 77 46 96C66 104 84 94 90 77Z" fill="#f5d7de" stroke="#bd7488" stroke-width="1.8"/>
+            <circle cx="91" cy="76" r="7" fill="#d9a95c" stroke="#b88a43" stroke-width="1.5"/>
+            <path d="M57 158C43 150 40 139 46 129C59 137 63 146 57 158Z" fill="#d8e3d0" stroke="#718b68" stroke-width="1.5"/>
+            <path d="M58 158C70 146 82 146 91 152C82 165 68 166 58 158Z" fill="#c5d5bb" stroke="#718b68" stroke-width="1.5"/>
+            <circle cx="143" cy="42" r="3" fill="#d98fa0"/><circle cx="151" cy="56" r="2" fill="#d9a95c"/><circle cx="37" cy="53" r="3" fill="#d98fa0"/>
+            <path d="M142 116l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5Z" fill="#d98fa0" opacity=".8"/>
+            <path d="M34 111l1.5 4 4 1.5-4 1.5-1.5 4-1.5-4-4-1.5 4-1.5 1.5-4Z" fill="#d9a95c" opacity=".8"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="shell intro-grid" aria-label="Policy highlights">
+      <article class="soft-card">
+        <div class="icon-bubble" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="23" height="23" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-8-4.5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6.5-8 11-8 11Z"/><path d="M8 12h8M12 8v8"/></svg>
+        </div>
+        <h2>Made for community fun</h2>
+        <p>Information may be used to keep features such as balances, pets, trades, verification, and games working as intended.</p>
+      </article>
+      <article class="soft-card">
+        <div class="icon-bubble leaf-bubble" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="23" height="23" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 3.5C11 3 5 7 5 13a5 5 0 0 0 5 5c6 0 10-6 10.5-14.5Z"/><path d="M3.5 21c3-6 6-8 11-11"/></svg>
+        </div>
+        <h2>Clear, not complicated</h2>
+        <p>This policy describes categories of information that may be handled. The exact data stored depends on the features enabled and the bot's configuration.</p>
+      </article>
+    </section>
+
+    <section class="shell policy-layout" id="policy" aria-labelledby="policy-title">
+      <aside class="toc" aria-label="Policy contents">
+        <h2>In this little guide</h2>
+        <nav>
+          <a href="#data">01 · Information</a>
+          <a href="#use">02 · How it is used</a>
+          <a href="#storage">03 · Storage</a>
+          <a href="#presence">04 · Presence</a>
+          <a href="#anonymous">05 · Anonymous letters</a>
+          <a href="#third-party">06 · Services</a>
+          <a href="#choices">07 · Your choices</a>
+          <a href="#changes">08 · Updates</a>
+        </nav>
+      </aside>
+
+      <div class="policy-main">
+        <div class="policy-heading">
+          <span class="eyebrow"><span class="dot" aria-hidden="true"></span> The details</span>
+          <h2 id="policy-title">Privacy Policy</h2>
+          <p>Please read this guide to understand how information may be handled when you use Little Garden Bot.</p>
+        </div>
+
+        <div class="policy-list">
+          <details class="policy-item" id="data" open>
+            <summary><span class="section-number">01</span> Information the bot may process <span class="chevron" aria-hidden="true">⌄</span></summary>
+            <div class="policy-content">
+              <p>Depending on the features enabled and how the bot is configured, Little Garden Bot may process these categories of information:</p>
+              <ul>
+                <li><strong>Discord identifiers:</strong> user IDs, server (guild) IDs, channel IDs, and message or interaction IDs when needed to respond or operate a feature.</li>
+                <li><strong>Economy and game information:</strong> currency balances, inventory, pet details, trading activity, game results, cooldowns, and progress.</li>
+                <li><strong>Verification submissions:</strong> answers or details submitted through button or form verification, along with review status where configured.</li>
+                <li><strong>Messages and interactions:</strong> content or selections you submit to commands, buttons, forms, cooking and drink features, hugs, tarot readings, watering sprouts, and other activities.</li>
+                <li><strong>Anonymous letters:</strong> the message content and technical identifiers needed to deliver or moderate the feature, depending on its implementation.</li>
+                <li><strong>Presence information:</strong> online status or activity-related presence updates only if a presence-based feature is enabled, the necessary access is available, and the bot is configured to process them.</li>
+              </ul>
+              <div class="callout"><strong>A note about accuracy:</strong> This list describes possible categories, not a guarantee that every item is collected or stored. The bot owner should verify the live BDFD commands, variables, logs, and any connected services against this policy before relying on it.</div>
+            </div>
+          </details>
+
+          <details class="policy-item" id="use">
+            <summary><span class="section-number">02</span> How information may be used <span class="chevron" aria-hidden="true">⌄</span></summary>
+            <div class="policy-content">
+              <p>Information may be processed to:</p>
+              <ul>
+                <li>Respond to commands, buttons, forms, and other interactions.</li>
+                <li>Maintain balances, items, pets, trades, cooldowns, and game progress.</li>
+                <li>Complete or review verification requests and support server moderation workflows.</li>
+                <li>Deliver interactive messages, including anonymous letters, and operate community features.</li>
+                <li>Calculate server or member statistics, including estimated presence counts if that feature is implemented.</li>
+                <li>Help troubleshoot errors, prevent abuse, and keep the bot operating reliably.</li>
+              </ul>
+              <p>Information should be used only for purposes connected to the bot's features and administration. The bot owner should not claim that data is never shared, logged, or retained unless the actual setup has been checked.</p>
+            </div>
+          </details>
+
+          <details class="policy-item" id="storage">
+            <summary><span class="section-number">03</span> Storage and retention <span class="chevron" aria-hidden="true">⌄</span></summary>
+            <div class="policy-content">
+              <p>Some features may need to retain information so that balances, pet inventories, verification states, or preferences continue to work between interactions. Other information may be processed temporarily to respond to a command.</p>
+              <p>Where and for how long information is stored depends on the bot's BDFD configuration, enabled variables, logs, and any additional services used by the owner. This policy does not assert that no data is stored. The owner should document actual storage locations and retention periods and remove information when it is no longer needed, where feasible.</p>
+              <p>Do not send passwords, payment-card details, government ID numbers, or other highly sensitive information through bot features.</p>
+            </div>
+          </details>
+
+          <details class="policy-item" id="presence">
+            <summary><span class="section-number">04</span> Presence and activity statistics <span class="chevron" aria-hidden="true">⌄</span></summary>
+            <div class="policy-content">
+              <p>If a presence-based statistic is implemented, the bot may process presence updates to estimate online-member activity for a displayed count. Availability depends on Discord's permissions, gateway intents, and the bot's configuration.</p>
+              <p>A global count may be approximate: a person can belong to multiple servers, and not every member's presence is necessarily available. The bot owner should confirm whether individual presence data is retained, whether an opt-out is offered, and whether any data is sent to or stored by a service outside Discord.</p>
+              <p>If the bot does not use presence information, this section describes a possible feature and should be updated to say so before publication.</p>
+            </div>
+          </details>
+
+          <details class="policy-item" id="anonymous">
+            <summary><span class="section-number">05</span> Anonymous letters and user content <span class="chevron" aria-hidden="true">⌄</span></summary>
+            <div class="policy-content">
+              <p>Anonymous letter features may show a message to its recipient without displaying the sender's identity. “Anonymous” describes what the feature displays; it is not a promise that the system cannot associate a submission with technical identifiers or logs.</p>
+              <p>Avoid including private contact details or sensitive information in letters. The owner should verify whether sender IDs, message content, or moderation logs are stored and explain those practices accurately.</p>
+            </div>
+          </details>
+
+          <details class="policy-item" id="third-party">
+            <summary><span class="section-number">06</span> Discord and third-party services <span class="chevron" aria-hidden="true">⌄</span></summary>
+            <div class="policy-content">
+              <p>The bot operates through Discord and may rely on Bot Designer for Discord (BDFD) and other services selected by the owner. These services may process information as part of providing their functionality and are governed by their own policies and terms.</p>
+              <p>For details about Discord's handling of account information, see <a href="https://discord.com/privacy" target="_blank" rel="noopener noreferrer">Discord's Privacy Policy</a>. The bot owner should add any other third-party services actually used by the bot before publishing this policy.</p>
+            </div>
+          </details>
+
+          <details class="policy-item" id="choices">
+            <summary><span class="section-number">07</span> Your choices and privacy questions <span class="chevron" aria-hidden="true">⌄</span></summary>
+            <div class="policy-content">
+              <p>You can choose whether to use optional bot features. You can also leave a server where the bot is present or stop interacting with the bot, though information already retained may not be deleted automatically.</p>
+              <p>For a question or request about information associated with your use of the bot, contact the owner through the support server below. The owner should review the request and explain what can be located, corrected, or deleted based on the bot's actual storage and applicable requirements.</p>
+              <p>If presence-based features are used, the owner should state clearly whether users can opt out of that processing and how to request it. Do not assume that opting out is available unless it has been implemented.</p>
+            </div>
+          </details>
+
+          <details class="policy-item" id="security">
+            <summary><span class="section-number">08</span> Security and policy updates <span class="chevron" aria-hidden="true">⌄</span></summary>
+            <div class="policy-content">
+              <p>The owner should use reasonable measures to protect information within their control, while recognizing that no online service can guarantee absolute security.</p>
+              <p>This policy may change if the bot's features, storage, or service providers change. The date at the top indicates when this page was last updated. Material changes should be reflected here.</p>
+            </div>
+          </details>
+        </div>
+
+        <section class="contact-card" id="contact" aria-labelledby="contact-title">
+          <div>
+            <span class="eyebrow"><span class="dot" aria-hidden="true"></span> Need a hand?</span>
+            <h2 id="contact-title">Let's talk it through.</h2>
+            <p>Have a privacy question about Little Garden Bot? Visit the support community and contact the bot owner.</p>
+          </div>
+          <a class="button" href="https://discord.gg/dbExmqRypP" target="_blank" rel="noopener noreferrer">Open support server ↗</a>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-inner">
+      <div><span class="footer-brand">Little Garden Bot</span> <span class="tiny-flower" aria-hidden="true">✿</span> A little kindness goes a long way.</div>
+      <div>Privacy Policy · Last updated October 21, 2026</div>
+    </div>
+  </footer>
+
+  <button class="top-button" id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
+
+  <script>
+    (function () {
+      const menuToggle = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
+      const backToTop = document.getElementById('backToTop');
+
+      menuToggle.addEventListener('click', function () {
+        const isOpen = navLinks.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          navLinks.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      window.addEventListener('scroll', function () {
+        backToTop.classList.toggle('visible', window.scrollY > 500);
+      }, { passive: true });
+
+      backToTop.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+      });
+
+      document.querySelectorAll('.toc a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          const target = document.querySelector(link.getAttribute('href'));
+          if (target && target.tagName.toLowerCase() === 'details') target.open = true;
+        });
+      });
+      const original = {};
+      const thai = {
+        'meta-title': 'นโยบายความเป็นส่วนตัว · Little Garden Bot',
+        'skip': 'ข้ามไปยังเนื้อหา', 'menu': 'เมนู', 'nav1': 'นโยบายความเป็นส่วนตัว', 'nav2': 'ข้อมูลที่บอตอาจประมวลผล', 'nav3': 'ติดต่อเรา', 'nav4': 'เยี่ยมชมสวนของเรา ↗',
+        'eyebrow1': 'ความเป็นส่วนตัวและความโปร่งใส', 'hero': 'ความเป็นส่วนตัวของคุณ<br><span class="accent">เราจะดูแลอย่างใส่ใจ</span>',
+        'hero-copy': 'คู่มือที่เข้าใจง่ายเกี่ยวกับข้อมูลที่ Little Garden Bot อาจประมวลผล เพื่อให้เกมเล็ก ๆ สวนแสนอบอุ่น สัตว์เลี้ยง และเครื่องมือชุมชนบนเซิร์ฟเวอร์ Discord ทำงานได้',
+        'updated': 'อัปเดตล่าสุด: 21 ตุลาคม 2026', 'read': 'อ่านนโยบาย <span aria-hidden="true">↓</span>',
+        'highlight1h': 'สร้างมาเพื่อความสนุกของชุมชน', 'highlight1p': 'ข้อมูลอาจถูกใช้เพื่อให้ฟีเจอร์ต่าง ๆ เช่น ยอดเงิน สัตว์เลี้ยง การแลกเปลี่ยน การยืนยันตัวตน และเกม ทำงานได้ตามที่ตั้งใจไว้',
+        'highlight2h': 'ชัดเจน ไม่ซับซ้อน', 'highlight2p': 'นโยบายนี้อธิบายประเภทข้อมูลที่อาจมีการจัดการ ข้อมูลที่จัดเก็บจริงขึ้นอยู่กับฟีเจอร์ที่เปิดใช้และการตั้งค่าของบอต',
+        'toc-title': 'สารบัญเล็ก ๆ', 'toc1': '01 · ข้อมูล', 'toc2': '02 · การใช้ข้อมูล', 'toc3': '03 · การจัดเก็บ', 'toc4': '04 · สถานะออนไลน์', 'toc5': '05 · จดหมายไม่ระบุตัวตน', 'toc6': '06 · บริการอื่น', 'toc7': '07 · ทางเลือกของคุณ', 'toc8': '08 · การเปลี่ยนแปลง',
+        'detail-eyebrow': 'รายละเอียด', 'policy-title': 'นโยบายความเป็นส่วนตัว', 'policy-intro': 'โปรดอ่านเพื่อทำความเข้าใจว่าข้อมูลอาจถูกจัดการอย่างไรเมื่อคุณใช้ Little Garden Bot',
+        'sum1': 'ข้อมูลที่บอตอาจประมวลผล', 'sum2': 'วิธีใช้ข้อมูล', 'sum3': 'การจัดเก็บและระยะเวลาเก็บรักษา', 'sum4': 'สถานะออนไลน์และสถิติการใช้งาน', 'sum5': 'จดหมายไม่ระบุตัวตนและเนื้อหาจากผู้ใช้', 'sum6': 'Discord และบริการจากบุคคลที่สาม', 'sum7': 'ทางเลือกและคำถามเกี่ยวกับความเป็นส่วนตัว', 'sum8': 'ความปลอดภัยและการอัปเดตนโยบาย',
+        'content1': `<p>ขึ้นอยู่กับฟีเจอร์ที่เปิดใช้และการตั้งค่าของบอต Little Garden Bot อาจประมวลผลข้อมูลประเภทต่อไปนี้:</p><ul><li><strong>ตัวระบุ Discord:</strong> ID ผู้ใช้ เซิร์ฟเวอร์ (guild) ห้องแชต และข้อความหรือการโต้ตอบ เมื่อจำเป็นต่อการตอบกลับหรือใช้งานฟีเจอร์</li><li><strong>ข้อมูลเศรษฐกิจและเกม:</strong> ยอดเงิน ไอเทม สัตว์เลี้ยง กิจกรรมแลกเปลี่ยน ผลเกม คูลดาวน์ และความคืบหน้า</li><li><strong>ข้อมูลการยืนยันตัวตน:</strong> คำตอบหรือรายละเอียดจากปุ่มหรือแบบฟอร์ม พร้อมสถานะการตรวจสอบหากมีการตั้งค่าไว้</li><li><strong>ข้อความและการโต้ตอบ:</strong> เนื้อหาหรือสิ่งที่เลือกส่งผ่านคำสั่ง ปุ่ม แบบฟอร์ม ฟีเจอร์ทำอาหารและเครื่องดื่ม กอด ดูไพ่ทาโรต์ รดน้ำต้นกล้า และกิจกรรมอื่น ๆ</li><li><strong>จดหมายไม่ระบุตัวตน:</strong> เนื้อหาข้อความและตัวระบุทางเทคนิคที่จำเป็นต่อการส่งหรือดูแลความเรียบร้อย ขึ้นอยู่กับการทำงานจริง</li><li><strong>ข้อมูลสถานะออนไลน์:</strong> สถานะออนไลน์หรือข้อมูลกิจกรรม เฉพาะเมื่อเปิดใช้ฟีเจอร์ที่ต้องใช้ข้อมูลนี้และมีการตั้งค่าให้ประมวลผล</li></ul><div class="callout"><strong>หมายเหตุ:</strong> รายการนี้เป็นตัวอย่างประเภทข้อมูลที่อาจเกี่ยวข้อง ไม่ได้หมายความว่ามีการเก็บข้อมูลทุกประเภท ผู้ดูแลบอตควรตรวจสอบคำสั่ง ตัวแปร บันทึก และบริการที่เชื่อมต่อจริงใน BDFD ก่อนใช้นโยบายนี้</div>`,
+        'content2': `<p>ข้อมูลอาจถูกประมวลผลเพื่อ:</p><ul><li>ตอบคำสั่ง ปุ่ม แบบฟอร์ม และการโต้ตอบอื่น ๆ</li><li>ดูแลยอดเงิน ไอเทม สัตว์เลี้ยง การแลกเปลี่ยน คูลดาวน์ และความคืบหน้าในเกม</li><li>ดำเนินการหรือตรวจสอบคำขอยืนยันตัวตน และสนับสนุนการดูแลเซิร์ฟเวอร์</li><li>ส่งข้อความแบบโต้ตอบ รวมถึงจดหมายไม่ระบุตัวตน และให้ฟีเจอร์ชุมชนทำงาน</li><li>คำนวณสถิติเซิร์ฟเวอร์หรือสมาชิก รวมถึงจำนวนผู้ใช้ออนไลน์โดยประมาณ หากมีการทำฟีเจอร์นี้</li><li>แก้ไขข้อผิดพลาด ป้องกันการใช้งานในทางที่ผิด และช่วยให้บอตทำงานได้เสถียร</li></ul><p>ควรใช้ข้อมูลเฉพาะเพื่อวัตถุประสงค์ที่เกี่ยวข้องกับฟีเจอร์และการดูแลบอต ผู้ดูแลไม่ควรกล่าวว่าไม่มีการแบ่งปัน บันทึก หรือเก็บข้อมูลเลย เว้นแต่จะตรวจสอบการตั้งค่าจริงแล้ว</p>`,
+        'content3': `<p>บางฟีเจอร์จำเป็นต้องเก็บข้อมูลไว้ เพื่อให้ยอดเงิน ไอเทมสัตว์เลี้ยง สถานะการยืนยันตัวตน หรือการตั้งค่าทำงานต่อเนื่องระหว่างการใช้งาน ส่วนข้อมูลบางอย่างอาจถูกประมวลผลชั่วคราวเพื่อตอบคำสั่ง</p><p>สถานที่และระยะเวลาจัดเก็บขึ้นอยู่กับการตั้งค่า BDFD ตัวแปร บันทึก และบริการอื่นที่ผู้ดูแลเลือกใช้ นโยบายนี้ไม่ได้ยืนยันว่าไม่มีการจัดเก็บข้อมูล ผู้ดูแลควรระบุสถานที่จัดเก็บและระยะเวลาเก็บรักษาตามจริง และลบข้อมูลเมื่อไม่จำเป็น หากทำได้</p><p>อย่าส่งรหัสผ่าน รายละเอียดบัตรชำระเงิน เลขประจำตัวราชการ หรือข้อมูลอ่อนไหวมากผ่านฟีเจอร์ของบอต</p>`,
+        'content4': `<p>หากมีการใช้สถิติที่อาศัยสถานะออนไลน์ บอตอาจประมวลผลข้อมูลการเปลี่ยนแปลงสถานะเพื่อประเมินจำนวนสมาชิกออนไลน์สำหรับแสดงผล ทั้งนี้ขึ้นอยู่กับสิทธิ์ Gateway Intents และการตั้งค่าของ Discord และบอต</p><p>จำนวนรวมอาจเป็นค่าประมาณ เพราะคนหนึ่งคนอาจอยู่หลายเซิร์ฟเวอร์ และสถานะของสมาชิกทุกคนอาจเข้าถึงไม่ได้ ผู้ดูแลควรตรวจสอบว่ามีการเก็บข้อมูลสถานะรายบุคคลหรือไม่ มีทางเลือกไม่เข้าร่วมหรือไม่ และมีการส่งหรือจัดเก็บข้อมูลนอก Discord หรือไม่</p><p>หากบอตไม่ได้ใช้ข้อมูลสถานะออนไลน์ ควรแก้ไขส่วนนี้ให้ระบุข้อเท็จจริงก่อนเผยแพร่</p>`,
+        'content5': `<p>ฟีเจอร์จดหมายไม่ระบุตัวตนอาจแสดงข้อความให้ผู้รับเห็นโดยไม่แสดงชื่อผู้ส่ง คำว่า “ไม่ระบุตัวตน” หมายถึงสิ่งที่ฟีเจอร์แสดง ไม่ใช่การรับประกันว่าระบบจะเชื่อมโยงข้อความกับตัวระบุทางเทคนิคหรือบันทึกไม่ได้</p><p>หลีกเลี่ยงการใส่ข้อมูลติดต่อส่วนตัวหรือข้อมูลอ่อนไหวในจดหมาย ผู้ดูแลควรตรวจสอบว่ามีการเก็บ ID ผู้ส่ง เนื้อหาข้อความ หรือบันทึกการดูแลหรือไม่ และอธิบายตามการทำงานจริง</p>`,
+        'content6': `<p>บอตทำงานผ่าน Discord และอาจใช้ Bot Designer for Discord (BDFD) รวมถึงบริการอื่นที่ผู้ดูแลเลือกใช้ บริการเหล่านี้อาจประมวลผลข้อมูลเพื่อให้บริการ โดยอยู่ภายใต้นโยบายและข้อกำหนดของตนเอง</p><p>อ่านรายละเอียดเกี่ยวกับการจัดการข้อมูลบัญชีได้ที่ <a href="https://discord.com/privacy" target="_blank" rel="noopener noreferrer">นโยบายความเป็นส่วนตัวของ Discord</a> ผู้ดูแลควรเพิ่มข้อมูลบริการภายนอกอื่น ๆ ที่บอตใช้งานจริงก่อนเผยแพร่นโยบายนี้</p>`,
+        'content7': `<p>คุณเลือกได้ว่าจะใช้ฟีเจอร์เสริมของบอตหรือไม่ และสามารถออกจากเซิร์ฟเวอร์ที่มีบอตหรือหยุดใช้งานได้ อย่างไรก็ตาม ข้อมูลที่เก็บไว้แล้วอาจไม่ถูกลบโดยอัตโนมัติ</p><p>หากมีคำถามหรือคำขอเกี่ยวกับข้อมูลที่เกี่ยวข้องกับการใช้งานบอต โปรดติดต่อผู้ดูแลผ่านเซิร์ฟเวอร์ช่วยเหลือด้านล่าง ผู้ดูแลจะตรวจสอบคำขอและชี้แจงว่าสามารถค้นหา แก้ไข หรือลบข้อมูลใดได้บ้าง ตามระบบจัดเก็บจริงและข้อกำหนดที่เกี่ยวข้อง</p><p>หากมีการใช้ฟีเจอร์ที่อาศัยสถานะออนไลน์ ผู้ดูแลควรระบุชัดเจนว่าผู้ใช้สามารถปฏิเสธการประมวลผลนี้ได้หรือไม่ และต้องทำอย่างไร อย่าสันนิษฐานว่ามีระบบปฏิเสธ หากยังไม่ได้ทำไว้</p>`,
+        'content8': `<p>ผู้ดูแลควรใช้มาตรการที่สมเหตุสมผลเพื่อปกป้องข้อมูลที่อยู่ภายใต้การควบคุมของตน แต่บริการออนไลน์ไม่สามารถรับประกันความปลอดภัยได้อย่างสมบูรณ์</p><p>นโยบายนี้อาจเปลี่ยนแปลงเมื่อฟีเจอร์ วิธีจัดเก็บ หรือผู้ให้บริการเปลี่ยนไป วันที่ด้านบนระบุวันที่แก้ไขล่าสุด และควรปรับปรุงข้อความเมื่อมีการเปลี่ยนแปลงสำคัญ</p>`,
+        'contact-eyebrow': 'ต้องการความช่วยเหลือไหม?', 'contact-title': 'มาคุยกันได้เลย', 'contact-copy': 'มีคำถามเกี่ยวกับความเป็นส่วนตัวของ Little Garden Bot ไหม? เข้าร่วมชุมชนช่วยเหลือและติดต่อผู้ดูแลบอตได้เลย', 'contact-btn': 'เปิดเซิร์ฟเวอร์ช่วยเหลือ ↗', 'footer-tag': '<span class="footer-brand">Little Garden Bot</span> <span class="tiny-flower" aria-hidden="true">✿</span> ความใจดีเล็ก ๆ มีความหมายเสมอ', 'footer-policy': 'นโยบายความเป็นส่วนตัว · อัปเดตล่าสุด 21 ตุลาคม 2026', 'backtop': 'กลับไปด้านบน'
+      };
+      function applyLanguage(lang) {
+        const isThai = lang === 'th';
+        document.documentElement.lang = lang;
+        document.title = isThai ? thai['meta-title'] : 'Privacy Policy · Little Garden Bot';
+        const set = (selector, html) => { const el = document.querySelector(selector); if (el) el.innerHTML = html; };
+        const setText = (selector, value) => { const el = document.querySelector(selector); if (el) el.textContent = value; };
+        const map = isThai ? thai : {
+          'skip':'Skip to content','menu':'Menu','nav1':'Privacy policy','nav2':'Data we may process','nav3':'Contact','nav4':'Visit our garden ↗',
+          'eyebrow1':'Privacy & transparency','hero':'Your privacy,<br><span class="accent">gently tended.</span>','hero-copy':'A clear, friendly guide to the information Little Garden Bot may process while bringing small games, garden moments, pets, and community tools to your Discord server.',
+          'updated':'Last updated: October 21, 2026','read':'Read the policy <span aria-hidden="true">↓</span>','highlight1h':'Made for community fun','highlight1p':'Information may be used to keep features such as balances, pets, trades, verification, and games working as intended.','highlight2h':'Clear, not complicated','highlight2p':"This policy describes categories of information that may be handled. The exact data stored depends on the features enabled and the bot's configuration.",
+          'toc-title':'In this little guide','toc1':'01 · Information','toc2':'02 · How it is used','toc3':'03 · Storage','toc4':'04 · Presence','toc5':'05 · Anonymous letters','toc6':'06 · Services','toc7':'07 · Your choices','toc8':'08 · Updates','detail-eyebrow':'The details','policy-title':'Privacy Policy','policy-intro':'Please read this guide to understand how information may be handled when you use Little Garden Bot.',
+          'sum1':'Information the bot may process','sum2':'How information may be used','sum3':'Storage and retention','sum4':'Presence and activity statistics','sum5':'Anonymous letters and user content','sum6':'Discord and third-party services','sum7':'Your choices and privacy questions','sum8':'Security and policy updates',
+          'content1':original.c1,'content2':original.c2,'content3':original.c3,'content4':original.c4,'content5':original.c5,'content6':original.c6,'content7':original.c7,'content8':original.c8,
+          'contact-eyebrow':'Need a hand?','contact-title':"Let's talk it through.",'contact-copy':'Have a privacy question about Little Garden Bot? Visit the support community and contact the bot owner.','contact-btn':'Open support server ↗','footer-tag':'<span class="footer-brand">Little Garden Bot</span> <span class="tiny-flower" aria-hidden="true">✿</span> A little kindness goes a long way.','footer-policy':'Privacy Policy · Last updated October 21, 2026','backtop':'Back to top'
+        };
+        const keys = {'#main .eyebrow':'eyebrow1','h1#hero-title':'hero','main .hero-copy':'hero-copy','.updated':'updated','.hero-bottom .button':'read','.intro-grid article:nth-child(1) h2':'highlight1h','.intro-grid article:nth-child(1) p':'highlight1p','.intro-grid article:nth-child(2) h2':'highlight2h','.intro-grid article:nth-child(2) p':'highlight2p','.toc h2':'toc-title','.toc nav a:nth-child(1)':'toc1','.toc nav a:nth-child(2)':'toc2','.toc nav a:nth-child(3)':'toc3','.toc nav a:nth-child(4)':'toc4','.toc nav a:nth-child(5)':'toc5','.toc nav a:nth-child(6)':'toc6','.toc nav a:nth-child(7)':'toc7','.toc nav a:nth-child(8)':'toc8','.policy-heading .eyebrow':'detail-eyebrow','#policy-title':'policy-title','.policy-heading p':'policy-intro','#contact .eyebrow':'contact-eyebrow','#contact-title':'contact-title','.contact-card p':'contact-copy','.contact-card .button':'contact-btn','.footer-inner > div:first-child':'footer-tag','.footer-inner > div:last-child':'footer-policy'};
+        Object.keys(keys).forEach(sel => { const el=document.querySelector(sel); if(el) el.innerHTML=map[keys[sel]]; });
+        document.querySelectorAll('.nav-links a').forEach((el,i)=>{el.innerHTML=map['nav'+(i+1)];});
+        document.querySelectorAll('.policy-item summary').forEach((el,i)=>{const n=i+1;el.innerHTML='<span class="section-number">0'+n+'</span> '+map['sum'+n]+' <span class="chevron" aria-hidden="true">⌄</span>';});
+        document.querySelectorAll('.policy-item .policy-content').forEach((el,i)=>{el.innerHTML=map['content'+(i+1)];});
+        setText('.skip-link',map.skip); setText('#menuToggle',map.menu);
+        document.getElementById('backToTop').setAttribute('aria-label',map.backtop); document.getElementById('backToTop').title=map.backtop;
+        document.querySelectorAll('.lang-btn').forEach(btn=>{const active=btn.dataset.lang===lang;btn.classList.toggle('active',active);btn.setAttribute('aria-pressed',String(active));});
+        try { localStorage.setItem('lgb-language',lang); } catch(e) {}
+      }
+      // Preserve the source-language section markup so switching back to English is lossless.
+      document.querySelectorAll('.policy-item .policy-content').forEach((el,i)=>{original['c'+(i+1)]=el.innerHTML;});
+      original.c1 = document.querySelectorAll('.policy-item .policy-content')[0].innerHTML;
+      original.c2 = document.querySelectorAll('.policy-item .policy-content')[1].innerHTML;
+      original.c3 = document.querySelectorAll('.policy-item .policy-content')[2].innerHTML;
+      original.c4 = document.querySelectorAll('.policy-item .policy-content')[3].innerHTML;
+      original.c5 = document.querySelectorAll('.policy-item .policy-content')[4].innerHTML;
+      original.c6 = document.querySelectorAll('.policy-item .policy-content')[5].innerHTML;
+      original.c7 = document.querySelectorAll('.policy-item .policy-content')[6].innerHTML;
+      original.c8 = document.querySelectorAll('.policy-item .policy-content')[7].innerHTML;
+      document.querySelectorAll('.lang-btn').forEach(btn=>btn.addEventListener('click',()=>applyLanguage(btn.dataset.lang)));
+      let preferred='en'; try { const saved=localStorage.getItem('lgb-language'); if(saved==='th'||saved==='en') preferred=saved; } catch(e) {}
+      // Add Thai translations for the skip/menu controls and all major policy text.
+      applyLanguage(preferred);
+    })();
+  </script>
+</body>
+</html>
